@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ public class ApiViewHolder  extends RecyclerView.ViewHolder  implements View.OnC
         super(itemView);
         this.onItemClickedListener=onItemClickedListener;
         initViews(itemView);
+
     }
 
     private void initViews(View itemView) {
@@ -42,6 +44,8 @@ public class ApiViewHolder  extends RecyclerView.ViewHolder  implements View.OnC
     @Override
     public void onClick(View view) {
         onItemClickedListener.onItemClicked(getAdapterPosition());
+
+
     }
 
     public interface onItemClickedListener{

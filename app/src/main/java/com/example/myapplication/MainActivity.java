@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
             public void onClick(View view) {
                 ApiClient apiClient=Network.getRetrofitInstance(MainActivity.this).create(ApiClient.class);
 
-
                 Call<List<ResponseDryRun>> call=apiClient.enterName(etEnterId.getText().toString());
                 call.enqueue(new Callback<List<ResponseDryRun>>() {
                     @Override
@@ -68,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
                         if(response.code()== HttpURLConnection.HTTP_OK && response.body() != null) {
                             modelList = response.body();
                             apiAdapter.updateList(modelList);
+
 
                         }
 
@@ -89,7 +89,10 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
     public void onItemClicked(int position) {
         Toast.makeText(this, "Item Clicked at position"+ position, Toast.LENGTH_SHORT).show();
         Intent intent=new Intent(this,Weather_Page_Activity.class);
-        intent.putExtra("woeid",2487956);
+//            intent.putExtra("val",modelList.get(position).getWoeid());
+            intent.putExtra("data",modelList.get(position).getWoeid());
+//       intent.putExtra("woeid",2487956);
         startActivity(intent);
+
     }
 }

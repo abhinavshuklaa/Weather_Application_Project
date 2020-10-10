@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
@@ -26,6 +27,7 @@ public class WeatherReport implements Serializable {
 		this.lattLong = lattLong;
 		this.timezone = timezone;
 	}
+
 
 	@SerializedName("sun_rise")
 	private String sunRise;

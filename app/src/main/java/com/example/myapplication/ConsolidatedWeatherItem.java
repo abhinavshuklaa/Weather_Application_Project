@@ -1,10 +1,8 @@
 package com.example.myapplication;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
-@Generated("com.robohorse.robopojogenerator")
 public class ConsolidatedWeatherItem implements Serializable {
 
 	@SerializedName("id")
@@ -41,7 +39,7 @@ public class ConsolidatedWeatherItem implements Serializable {
 	private Object windDirection;
 
 	@SerializedName("air_pressure")
-	private int airPressure;
+	private float airPressure;
 
 	@SerializedName("humidity")
 	private int humidity;
@@ -96,7 +94,7 @@ public class ConsolidatedWeatherItem implements Serializable {
 		return windDirection;
 	}
 
-	public int getAirPressure(){
+	public float getAirPressure(){
 		return airPressure;
 	}
 
