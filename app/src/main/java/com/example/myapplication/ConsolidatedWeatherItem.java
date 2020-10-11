@@ -11,6 +11,24 @@ public class ConsolidatedWeatherItem implements Serializable {
 	@SerializedName("weather_state_name")
 	private String weatherStateName;
 
+	public ConsolidatedWeatherItem(long id, String weatherStateName, String weatherStateAbbr, String windDirectionCompass, String created, String applicableDate, Object minTemp, Object maxTemp, Object theTemp, Object windSpeed, Object windDirection, float airPressure, int humidity, Object visibility, int predictability) {
+		this.id = id;
+		this.weatherStateName = weatherStateName;
+		this.weatherStateAbbr = weatherStateAbbr;
+		this.windDirectionCompass = windDirectionCompass;
+		this.created = created;
+		this.applicableDate = applicableDate;
+		this.minTemp = minTemp;
+		this.maxTemp = maxTemp;
+		this.theTemp = theTemp;
+		this.windSpeed = windSpeed;
+		this.windDirection = windDirection;
+		this.airPressure = airPressure;
+		this.humidity = humidity;
+		this.visibility = visibility;
+		this.predictability = predictability;
+	}
+
 	@SerializedName("weather_state_abbr")
 	private String weatherStateAbbr;
 
@@ -82,17 +100,22 @@ public class ConsolidatedWeatherItem implements Serializable {
 		return maxTemp;
 	}
 
+
 	public Object getTheTemp(){
 		return theTemp;
 	}
+
+
 
 	public Object getWindSpeed(){
 		return windSpeed;
 	}
 
+
 	public Object getWindDirection(){
 		return windDirection;
 	}
+
 
 	public float getAirPressure(){
 		return airPressure;
@@ -109,4 +132,5 @@ public class ConsolidatedWeatherItem implements Serializable {
 	public int getPredictability(){
 		return predictability;
 	}
+
 }

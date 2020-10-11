@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/recyclerViewSecondActivity"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
     tools:context=".Weather_Page_Activity">
 
 
-    <TextView
-        android:id="@+id/tvGetWeatherStatus"
-        android:layout_width="wrap_content"
-        android:textColor="@android:color/holo_red_dark"
-        android:layout_height="wrap_content"
-        android:text="abab"
-        android:textSize="20sp"/>
 
-    <TextView
-        android:id="@+id/tvGetWindDirection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvGetWeatherStatus"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textColor="@android:color/holo_red_dark"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="abab"-->
+<!--        android:textSize="20sp"/>-->
 
-    <TextView
-        android:id="@+id/tvGetAirPressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvGetWindDirection"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="20sp"/>-->
 
-    <TextView
-        android:id="@+id/tvGetPredictability"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvGetAirPressure"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="20sp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvGetPredictability"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="20sp"/>-->
 
 
 
-</LinearLayout>
+</androidx.recyclerview.widget.RecyclerView>

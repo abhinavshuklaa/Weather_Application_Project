@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="15dp"
+    app:cardCornerRadius="4dp"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:id="@+id/llItemsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvGetWeatherStatusName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/holo_orange_light"/>
+
+
+        <TextView
+            android:id="@+id/tvMin_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/holo_green_dark"/>
+
+
+        <TextView
+            android:id="@+id/tvMax_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/holo_blue_bright"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
