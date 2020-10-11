@@ -1,14 +1,20 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -21,12 +27,18 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements ApiViewHolder.onItemClickedListener{
+
     private EditText etEnterId;
-    private Button btnGetApi;
-    private RecyclerView recyclerView;
     private ProgressBar progressBar;
-    private ApiAdapter apiAdapter;
-    private List<ResponseDryRun> modelList=new ArrayList<>();
+      //  private ProgressBar progressBar;
+
+        private ApiAdapter apiAdapter;
+        private List<ResponseDryRun> modelList=new ArrayList<>();
+        private int woied;
+
+    private ImageView btnGetApi;
+    private RecyclerView recyclerView;
+
 
 
     @Override
@@ -35,15 +47,10 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
         setContentView(R.layout.activity_main);
         initViews();
         setRecyclerAdapter();
-    }
-
-    private void setRecyclerAdapter() {
-        apiAdapter=new ApiAdapter(modelList,this);
-        LinearLayoutManager manager=new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(manager);
-        recyclerView.setAdapter(apiAdapter);
 
     }
+
+
 
     private void initViews() {
         etEnterId=findViewById(R.id.etEnterId);
@@ -69,6 +76,8 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
                             modelList = response.body();
                             apiAdapter.updateList(modelList);
 
+//int wo=response.getClass().get
+
                         }
 
 
@@ -89,7 +98,18 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
     public void onItemClicked(int position) {
         Toast.makeText(this, "Item Clicked at position"+ position, Toast.LENGTH_SHORT).show();
         Intent intent=new Intent(this,Weather_Page_Activity.class);
-        intent.putExtra("woeid",2487956);
+        //ResponseDryRun responseDryRun=new ResponseDryRun(String lattLong, int woeid, String title, String locationType)
+        intent.putExtra("message", (Parcelable) modelList.get(position));
+
+
         startActivity(intent);
     }
+        private void setRecyclerAdapter() {
+            apiAdapter=new ApiAdapter(modelList,this);
+            LinearLayoutManager manager=new LinearLayoutManager(this);
+            recyclerView.setLayoutManager(manager);
+            recyclerView.setAdapter(apiAdapter);
+
+        }
+
 }

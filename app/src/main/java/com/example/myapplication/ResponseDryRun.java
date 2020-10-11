@@ -1,9 +1,12 @@
 package com.example.myapplication;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
-public class ResponseDryRun implements Serializable {
+public class ResponseDryRun implements Serializable, Parcelable {
 
 	@SerializedName("latt_long")
 	private String lattLong;
@@ -24,6 +27,25 @@ public class ResponseDryRun implements Serializable {
 	@SerializedName("location_type")
 	private String locationType;
 
+	protected ResponseDryRun(Parcel in) {
+		lattLong = in.readString();
+		woeid = in.readInt();
+		title = in.readString();
+		locationType = in.readString();
+	}
+
+	public static final Creator<ResponseDryRun> CREATOR = new Creator<ResponseDryRun>() {
+		@Override
+		public ResponseDryRun createFromParcel(Parcel in) {
+			return new ResponseDryRun(in);
+		}
+
+		@Override
+		public ResponseDryRun[] newArray(int size) {
+			return new ResponseDryRun[size];
+		}
+	};
+
 	public String getLattLong(){
 		return lattLong;
 	}
@@ -38,5 +60,18 @@ public class ResponseDryRun implements Serializable {
 
 	public String getLocationType(){
 		return locationType;
+	}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel parcel, int i) {
+		parcel.writeString(lattLong);
+		parcel.writeInt(woeid);
+		parcel.writeString(title);
+		parcel.writeString(locationType);
 	}
 }

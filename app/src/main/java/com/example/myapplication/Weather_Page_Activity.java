@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import java.net.HttpURLConnection;
@@ -16,6 +17,7 @@ public class Weather_Page_Activity extends AppCompatActivity {
     private TextView tvGetWeatherStatus;
     private TextView tvGetWindDirection;
     private TextView tvGetAirPressure;
+    private  int a;
     private TextView tvGetPredictability;
 
     @Override
@@ -35,14 +37,16 @@ public class Weather_Page_Activity extends AppCompatActivity {
 
         ApiClient apiClient=Network.getRetrofitInstance(Weather_Page_Activity.this).create(ApiClient.class);
 
-        Call<WeatherReport> call=apiClient.enterWoeidData(getIntent().getLongExtra("woeid",0));
+        Call<WeatherReport> call=apiClient.enterWoeidData(Long.parseLong(String.valueOf(getIntent().getParcelableExtra("message"))));
         call.enqueue(new Callback<WeatherReport>() {
             @Override
             public void onResponse(Call<WeatherReport> call, Response<WeatherReport> response) {
                 if(response.code()== HttpURLConnection.HTTP_OK && response.body() != null){
                     WeatherReport weatherReport=response.body();
+
                     tvGetWeatherStatus.setText(weatherReport.getSunRise());
 //                    tvGetAirPressure.setText(weatherReport.get);
+
 
                 }
             }
