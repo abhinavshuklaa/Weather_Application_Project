@@ -13,7 +13,7 @@ public class ResponseModelSecondActivity implements Serializable {
     @SerializedName("wind_direction_compass")
     private String windDirectionCompass;
 
-    public ResponseModelSecondActivity(String weatherStateName, String windDirectionCompass, String applicableDate, Object minTemp, Object maxTemp, Object windSpeed, float airPressure) {
+    public ResponseModelSecondActivity(String weatherStateName, String windDirectionCompass, String applicableDate, double minTemp, double maxTemp, double windSpeed, float airPressure) {
         this.weatherStateName = weatherStateName;
         this.windDirectionCompass = windDirectionCompass;
         this.applicableDate = applicableDate;
@@ -27,14 +27,14 @@ public class ResponseModelSecondActivity implements Serializable {
     private String applicableDate;
 
     @SerializedName("min_temp")
-    private Object minTemp;
+    private double minTemp;
 
     @SerializedName("max_temp")
-    private Object maxTemp;
+    private double maxTemp;
 
 
     @SerializedName("wind_speed")
-    private Object windSpeed;
+    private double windSpeed;
 
     @SerializedName("air_pressure")
     private float airPressure;
@@ -52,15 +52,15 @@ public class ResponseModelSecondActivity implements Serializable {
         return applicableDate;
     }
 
-    public Object getMinTemp() {
+    public double getMinTemp() {
         return minTemp;
     }
 
-    public Object getMaxTemp() {
+    public double getMaxTemp() {
         return maxTemp;
     }
 
-    public Object getWindSpeed() {
+    public double getWindSpeed() {
         return windSpeed;
     }
 

@@ -12,6 +12,9 @@ import java.util.List;
 public class ApiAdapterSecondActivity extends RecyclerView.Adapter<ApiViewHolderSecondActivity> {
     private List<ResponseModelSecondActivity> responseModelSecondActivityList;
 
+    public  ApiAdapterSecondActivity(List<ResponseModelSecondActivity> modelSecondActivities){
+        responseModelSecondActivityList=modelSecondActivities;
+    }
 
 
     @NonNull
@@ -30,5 +33,10 @@ public class ApiAdapterSecondActivity extends RecyclerView.Adapter<ApiViewHolder
     @Override
     public int getItemCount() {
         return responseModelSecondActivityList.size();
+    }
+
+    public void updateListSecondActivity(List<ResponseModelSecondActivity> list){
+        responseModelSecondActivityList=list;
+        notifyDataSetChanged();
     }
 }
