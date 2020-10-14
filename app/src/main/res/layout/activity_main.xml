@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="Enter Account Id"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        android:backgroundTint="@android:color/holo_blue_bright"/>
 
     <Button
         android:id="@+id/btnRequestApi"
