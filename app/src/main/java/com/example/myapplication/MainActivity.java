@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
             public void onClick(View view) {
                 ApiClient apiClient=Network.getRetrofitInstance(MainActivity.this).create(ApiClient.class);
 
-
                 Call<List<ResponseDryRun>> call=apiClient.enterName(etEnterId.getText().toString());
                 call.enqueue(new Callback<List<ResponseDryRun>>() {
                     @Override
@@ -76,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
                             modelList = response.body();
                             apiAdapter.updateList(modelList);
 
-//int wo=response.getClass().get
 
                         }
 
@@ -94,15 +92,8 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
     }
 
 
-    @Override
-    public void onItemClicked(int position) {
-        Toast.makeText(this, "Item Clicked at position"+ position, Toast.LENGTH_SHORT).show();
-        Intent intent=new Intent(this,Weather_Page_Activity.class);
-        //ResponseDryRun responseDryRun=new ResponseDryRun(String lattLong, int woeid, String title, String locationType)
-        intent.putExtra("message", (Parcelable) modelList.get(position));
 
 
-        startActivity(intent);
     }
         private void setRecyclerAdapter() {
             apiAdapter=new ApiAdapter(modelList,this);

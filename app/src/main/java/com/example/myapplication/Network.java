@@ -61,7 +61,7 @@ public class Network {
                 if (!hasNetwork(context)) {
                     CacheControl cacheControl = new CacheControl.Builder()
 
-                            .maxStale(7, TimeUnit.DAYS)
+                            .maxStale(7, TimeUnit.MINUTES)
                             .build();
 
                     request = ((Request) request).newBuilder()

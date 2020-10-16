@@ -12,9 +12,9 @@ public class ResponseDryRun implements Serializable, Parcelable {
 	private String lattLong;
 
 	@SerializedName("woeid")
-	private int woeid;
+	private long woeid;
 
-	public ResponseDryRun(String lattLong, int woeid, String title, String locationType) {
+	public ResponseDryRun(String lattLong, long woeid, String title, String locationType) {
 		this.lattLong = lattLong;
 		this.woeid = woeid;
 		this.title = title;
@@ -50,7 +50,7 @@ public class ResponseDryRun implements Serializable, Parcelable {
 		return lattLong;
 	}
 
-	public int getWoeid(){
+	public long getWoeid(){
 		return woeid;
 	}
 

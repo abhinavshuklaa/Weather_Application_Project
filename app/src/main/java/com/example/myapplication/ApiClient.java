@@ -14,7 +14,10 @@ public interface ApiClient {
     @GET("/api/location/search/")
     Call<List<ResponseDryRun>> enterName(@Query("query") String enterName);
 
-    @GET("/api/location/{woeid}")
+    @GET("/api/location/{woeid}/")
     Call<WeatherReport> enterWoeidData(@Path("woeid") long woeidNumber);
+
+//    @GET("/api/location/{woeid}/")
+//    Call<List<ResponseModelSecondActivity>> getListOfResponse(@Path("woeid") long woeidNumber);
 
 }
