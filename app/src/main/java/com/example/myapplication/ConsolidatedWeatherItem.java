@@ -134,3 +134,18 @@ public class ConsolidatedWeatherItem implements Serializable {
 	}
 
 }
+
+/*
+
+	@SerializedName("weather_state_abbr")
+	private String weatherStateAbbr;
+
+
+	public String getWeatherStateAbbr(){
+		return weatherStateAbbr;
+	}
+	String weatherStateAbbr
+		this.weatherStateAbbr = weatherStateAbbr;
+
+
+ */

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:elevation="15dp"
-    app:cardCornerRadius="4dp"
-    android:background="@android:color/holo_red_dark"
     android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="10dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="4dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/llClickLocation"
@@ -19,8 +24,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
             android:layout_gravity="center_horizontal"
-            android:textColor="@android:color/holo_orange_light"/>
+            android:textColor="@android:color/white"/>
 
 
         <TextView
@@ -28,8 +35,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
             android:layout_gravity="center_horizontal"
-            android:textColor="@android:color/holo_green_dark"/>
+            android:textColor="@android:color/white"/>
 
 
         <TextView
@@ -37,11 +46,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
             android:layout_gravity="center_horizontal"
-            android:textColor="@android:color/holo_blue_bright"/>
+            android:textColor="@android:color/white"/>
 
     </LinearLayout>
 
+    </androidx.cardview.widget.CardView>
 
 
-</androidx.cardview.widget.CardView>
+
+</LinearLayout>

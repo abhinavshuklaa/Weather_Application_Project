@@ -88,13 +88,15 @@ public class Weather_Page_Activity extends AppCompatActivity {
 //                String windDirectionCompass, String applicableDate, float minTemp, Object maxTemp, Object windSpeed, float airPressure
                 String windDirectionCompass=response.body().getConsolidatedWeather().get(i).getWindDirectionCompass();
                 String applicableDate=response.body().getConsolidatedWeather().get(i).getApplicableDate();
-                double minTemp= (double) response.body().getConsolidatedWeather().get(i).getMinTemp();
+                double  minTemp= (double) response.body().getConsolidatedWeather().get(i).getMinTemp();
                 double maxTemp= (double) response.body().getConsolidatedWeather().get(i).getMaxTemp();
                 double windSpeed= (double) response.body().getConsolidatedWeather().get(i).getWindDirection();
                 float airPressure= response.body().getConsolidatedWeather().get(i).getAirPressure();
+                String weather_state_abbr=response.body().getConsolidatedWeather().get(i).getWeatherStateAbbr();
 
+                //String weatherStateName, String windDirectionCompass, String applicableDate, double minTemp, double maxTemp, double windSpeed, float airPressure,String weatherStateAbbr
 
-                responseModelSecondActivityList.add(new ResponseModelSecondActivity(weatherState,applicableDate,windDirectionCompass,minTemp,maxTemp,windSpeed,airPressure));
+                responseModelSecondActivityList.add(new ResponseModelSecondActivity(weatherState,windDirectionCompass,applicableDate,minTemp,maxTemp,windSpeed,airPressure,weather_state_abbr));
 
             }
             apiAdapterSecondActivity.updateListSecondActivity(responseModelSecondActivityList);
