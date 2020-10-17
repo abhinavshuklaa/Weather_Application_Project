@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,7 +10,7 @@
         android:elevation="10dp"
         app:cardCornerRadius="8dp"
         android:layout_margin="4dp"
-        android:backgroundTint="#0062FF"
+        android:backgroundTint="@android:color/holo_blue_light"
         android:layout_height="match_parent">
 
     <LinearLayout
