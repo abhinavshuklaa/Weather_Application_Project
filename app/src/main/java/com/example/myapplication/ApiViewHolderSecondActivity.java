@@ -50,7 +50,7 @@ public class ApiViewHolderSecondActivity extends RecyclerView.ViewHolder {
         tvDate.setText("Date: "+responseModelSecondActivity.getApplicableDate());
         tvAirPressure.setText("Air_pressure: "+Float.toString(responseModelSecondActivity.getAirPressure()));
         tvWindSpeed.setText("Wind_speed: "+responseModelSecondActivity.getWindSpeed());
-        tvWindDirection.setText("Wind_direction: "+responseModelSecondActivity.getWindDirectionCompass());
+        tvWindDirection.setText("Wind_direction : "+responseModelSecondActivity.getWindDirectionCompass());
 
 
 
