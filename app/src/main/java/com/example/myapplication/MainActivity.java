@@ -5,12 +5,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
@@ -22,10 +26,11 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements ApiViewHolder.onItemClickedListener{
     private EditText etEnterId;
-    private Button btnGetApi;
+    private ImageView btnGetApi;
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
     private ApiAdapter apiAdapter;
+    private VideoView videoView;
     private List<ResponseDryRun> modelList=new ArrayList<>();
 
 
@@ -52,7 +57,17 @@ public class MainActivity extends AppCompatActivity implements ApiViewHolder.onI
         progressBar=findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
 
+        videoView=findViewById(R.id.videoview);
 
+        Uri uri=Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.wathervideo_1);
+        videoView.setVideoURI(uri);
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+        videoView.start();
 
         btnGetApi.setOnClickListener(new View.OnClickListener() {
 

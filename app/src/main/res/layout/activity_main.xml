@@ -3,35 +3,58 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    >
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/videoview"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        />
 
     <EditText
         android:id="@+id/etEnterId"
+        android:hint="Enter the location"
+        android:textColorHint="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="Enter Account Id"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        android:layout_height="50dp"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
 
-    <Button
+        />
+
+
+    <ImageView
         android:id="@+id/btnRequestApi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_blue_dark"
-        android:layout_below="@+id/etEnterId"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:text="Request API"/>
-
-
+        android:layout_width="61dp"
+        android:layout_height="47dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="19dp"
+        android:src="@drawable/sraech" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btnRequestApi"/>
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/btnRequestApi"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="20dp" />
+
+
+
+
+
 
 
     <ProgressBar

@@ -4,22 +4,29 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+
     android:elevation="15dp"
     app:cardCornerRadius="4dp"
-    android:background="@android:color/holo_red_dark"
+
+android:background="@android:color/transparent"
     android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/llClickLocation"
         android:layout_width="match_parent"
+        android:background="@color/light_gray"
         android:layout_height="wrap_content"
+
         android:orientation="vertical">
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
+            android:text="Main-City"
+            android:textStyle="italic"
+            android:textSize="30dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_gravity="center_horizontal"
+          android:layout_marginStart="25sp"
+
             android:textColor="@android:color/holo_orange_light"/>
 
 
@@ -27,8 +34,11 @@
             android:id="@+id/tvLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_gravity="center_horizontal"
+            android:text="Lattitude"
+            android:textSize="25sp"
+
+   android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
             android:textColor="@android:color/holo_green_dark"/>
 
 
