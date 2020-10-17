@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/recyclerViewSecondActivity"
     android:gravity="center_horizontal"
+    android:layoutAnimation="@anim/recycler_layout_animation"
     tools:context=".Weather_Page_Activity">
 
 

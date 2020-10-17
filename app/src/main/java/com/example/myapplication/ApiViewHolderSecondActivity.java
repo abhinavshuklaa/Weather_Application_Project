@@ -14,6 +14,11 @@ public class ApiViewHolderSecondActivity extends RecyclerView.ViewHolder {
     private TextView tvMin_temp;
     private TextView tvMax_temp;
     private ImageView imGetWeatherStatusIcon;
+    private TextView tvWindState;
+    private TextView tvDate;
+    private TextView tvWindSpeed;
+    private TextView tvAirPressure;
+    private TextView tvWindDirection;
 
 
 
@@ -26,16 +31,26 @@ public class ApiViewHolderSecondActivity extends RecyclerView.ViewHolder {
         tvGetWeatherStatusName=itemView.findViewById(R.id.tvGetWeatherStatusName);
         tvMin_temp=itemView.findViewById(R.id.tvMin_temp);
         tvMax_temp=itemView.findViewById(R.id.tvMax_temp);
+        tvWindSpeed=itemView.findViewById(R.id.tvWindSpeed);
+        tvDate=itemView.findViewById(R.id.tvDate);
+        tvWindState=itemView.findViewById(R.id.tvWindState);
+        tvWindDirection=itemView.findViewById(R.id.tvWindDirection);
+        tvAirPressure=itemView.findViewById(R.id.tvAirPressure);
         imGetWeatherStatusIcon=itemView.findViewById(R.id.imGetWeatherStatusImage);
+
 
 
     }
 
     public void setData(ResponseModelSecondActivity responseModelSecondActivity) {
         tvGetWeatherStatusName.setText(responseModelSecondActivity.getWeatherStateName());
-        tvMin_temp.setText(Double.toString(responseModelSecondActivity.getMinTemp()));
-        tvMax_temp.setText(Double.toString(responseModelSecondActivity.getMaxTemp()));
+        tvMin_temp.setText("Minimum_temp: "+Double.toString(responseModelSecondActivity.getMinTemp()));
+        tvMax_temp.setText("Maximum_temp: "+Double.toString(responseModelSecondActivity.getMaxTemp()));
         Picasso.get().load("https://www.metaweather.com/static/img/weather/png/"+responseModelSecondActivity.getWeatherStateAbbr()+".png").into(imGetWeatherStatusIcon);
+        tvDate.setText("Date: "+responseModelSecondActivity.getApplicableDate());
+        tvAirPressure.setText("Air_pressure: "+Float.toString(responseModelSecondActivity.getAirPressure()));
+        tvWindSpeed.setText("Wind_speed: "+responseModelSecondActivity.getWindSpeed());
+        tvWindDirection.setText("Wind_direction: "+responseModelSecondActivity.getWindDirectionCompass());
 
 
 

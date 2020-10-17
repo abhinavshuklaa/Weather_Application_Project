@@ -28,6 +28,7 @@ public class Weather_Page_Activity extends AppCompatActivity {
     private List<ResponseModelSecondActivity> responseModelSecondActivityList=new ArrayList<>();
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
