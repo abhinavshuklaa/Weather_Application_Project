@@ -31,9 +31,9 @@ public class ApiViewHolder  extends RecyclerView.ViewHolder  implements View.OnC
     }
     public void setData(ResponseDryRun responseModel){
 
-        tvName.setText(responseModel.getTitle());
-        tvDescription.setText(responseModel.getLocationType());
-        tvLogin.setText(responseModel.getLattLong());
+        tvName.setText("City "+responseModel.getTitle());
+//        tvDescription.setText("Latitude "+responseModel.getLocationType());
+        tvLogin.setText("Latitude "+responseModel.getLattLong());
 //        tvName.setText(responseModel.getName());
 //        tvLogin.setText(responseModel.getOwner().getLogin());
 //        tvDescription.setText(responseModel.getDescription());
