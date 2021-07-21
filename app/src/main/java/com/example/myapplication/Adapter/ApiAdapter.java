@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.R;
+import com.example.myapplication.Model.ResponseDryRun;
+import com.example.myapplication.ViewHolder.ApiViewHolder;
 
 import java.util.List;
 

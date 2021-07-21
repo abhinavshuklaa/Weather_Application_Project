@@ -1,10 +1,13 @@
-package com.example.myapplication;
+package com.example.myapplication.ViewHolder;
 
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.R;
+import com.example.myapplication.Model.ResponseDryRun;
 
 public class ApiViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     private TextView tvName;

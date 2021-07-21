@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.Adapter.ApiAdapterSecondActivity;
+import com.example.myapplication.Network.ApiClient;
+import com.example.myapplication.Network.Network;
+import com.example.myapplication.R;
+import com.example.myapplication.Model.ResponseModelSecondActivity;
+import com.example.myapplication.Model.WeatherReport;
 
 import java.util.ArrayList;
 import java.util.List;

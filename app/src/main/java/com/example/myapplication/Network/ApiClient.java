@@ -1,4 +1,7 @@
-package com.example.myapplication;
+package com.example.myapplication.Network;
+
+import com.example.myapplication.Model.ResponseDryRun;
+import com.example.myapplication.Model.WeatherReport;
 
 import java.util.List;
 

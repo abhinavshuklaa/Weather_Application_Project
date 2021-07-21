@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.ViewHolder;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -7,6 +7,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.R;
+import com.example.myapplication.Model.ResponseModelSecondActivity;
 import com.squareup.picasso.Picasso;
 
 public class ApiViewHolderSecondActivity extends RecyclerView.ViewHolder {
