@@ -1,60 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:elevation="12sp"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
 
-    <androidx.cardview.widget.CardView
+    android:elevation="15dp"
+    app:cardCornerRadius="4dp"
+
+android:background="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llClickLocation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="4dp"
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:elevation="10dp"
-        app:cardCornerRadius="8dp">
+        android:background="@color/light_gray"
+        android:layout_height="wrap_content"
 
-        <LinearLayout
-            android:id="@+id/llClickLocation"
-            android:layout_width="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:text="Main-City"
+            android:textStyle="italic"
+            android:textSize="30dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+          android:layout_marginStart="25sp"
 
-            <TextView
-                android:id="@+id/tvName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="16dp"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            android:textColor="@android:color/holo_orange_light"/>
 
 
-            <TextView
-                android:id="@+id/tvLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="16dp"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lattitude"
+            android:textSize="25sp"
+
+   android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:textColor="@android:color/holo_green_dark"/>
 
 
-            <TextView
-                android:id="@+id/tvDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="16dp"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/holo_blue_bright"/>
 
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 
-</LinearLayout>
+
+</androidx.cardview.widget.CardView>
