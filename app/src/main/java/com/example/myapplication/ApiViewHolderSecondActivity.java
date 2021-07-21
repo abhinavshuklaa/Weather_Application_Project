@@ -21,7 +21,6 @@ public class ApiViewHolderSecondActivity extends RecyclerView.ViewHolder {
     private TextView tvWindDirection;
 
 
-
     public ApiViewHolderSecondActivity(@NonNull View itemView) {
         super(itemView);
         initViews();
