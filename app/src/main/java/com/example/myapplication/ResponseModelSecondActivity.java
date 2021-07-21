@@ -10,10 +10,16 @@ public class ResponseModelSecondActivity implements Serializable {
     private String weatherStateName;
 
 
+
+    @SerializedName("weather_state_abbr")
+    private String weatherStateAbbr;
+
+
     @SerializedName("wind_direction_compass")
     private String windDirectionCompass;
 
-    public ResponseModelSecondActivity(String weatherStateName, String windDirectionCompass, String applicableDate, double minTemp, double maxTemp, double windSpeed, float airPressure) {
+
+    public ResponseModelSecondActivity(String weatherStateName, String windDirectionCompass, String applicableDate, double minTemp, double maxTemp, double windSpeed, float airPressure,String weatherStateAbbr) {
         this.weatherStateName = weatherStateName;
         this.windDirectionCompass = windDirectionCompass;
         this.applicableDate = applicableDate;
@@ -21,6 +27,7 @@ public class ResponseModelSecondActivity implements Serializable {
         this.maxTemp = maxTemp;
         this.windSpeed = windSpeed;
         this.airPressure = airPressure;
+        this.weatherStateAbbr = weatherStateAbbr;
     }
 
     @SerializedName("applicable_date")
@@ -38,6 +45,7 @@ public class ResponseModelSecondActivity implements Serializable {
 
     @SerializedName("air_pressure")
     private float airPressure;
+
 
 
     public String getWeatherStateName() {
@@ -67,4 +75,24 @@ public class ResponseModelSecondActivity implements Serializable {
     public float getAirPressure() {
         return airPressure;
     }
+    public String getWeatherStateAbbr(){
+        return weatherStateAbbr;
+    }
+
 }
+
+/*
+
+
+
+	@SerializedName("weather_state_abbr")
+	private String weatherStateAbbr;
+
+
+	public String getWeatherStateAbbr(){
+		return weatherStateAbbr;
+	}
+	String weatherStateAbbr
+		this.weatherStateAbbr = weatherStateAbbr;
+
+ */
