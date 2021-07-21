@@ -26,7 +26,6 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
@@ -36,7 +35,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     // Glide is used for image loading and image caching
     implementation "androidx.cardview:cardview:1.0.0"
-    implementation 'com.squareup.picasso:picasso:2.71828'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
